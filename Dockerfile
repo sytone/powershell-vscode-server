@@ -3,7 +3,7 @@ FROM ghcr.io/linuxserver/code-server
 USER root
 
 # PowerShell args
-ARG PS_VERSION=7.4.2
+ARG PS_VERSION=7.4.1
 ARG PS_PACKAGE=powershell-lts_${PS_VERSION}-1.deb_amd64.deb
 ARG PS_PACKAGE_URL=https://github.com/PowerShell/PowerShell/releases/download/v${PS_VERSION}/${PS_PACKAGE}
 
@@ -59,13 +59,13 @@ RUN echo "PowerShell version: ${PS_VERSION} PowerShell extension version: ${PS_E
 ARG VCS_REF="none"
 ARG IMAGE_NAME=ghcr.io/proxicon/powershell-vscode-server:latest
 
-LABEL maintainer="Proxicon https://github.com/Proxicon" \
-      readme.md="https://github.com/Proxicon/powershell-vscode-server/blob/main/README.md" \
+LABEL maintainer="sytone https://github.com/sytone" \
+      readme.md="https://github.com/sytone/powershell-vscode-server/blob/main/README.md" \
       description="Coder.com's code-server, PowerShell, and the PowerShell extension for vscode - all in one container." \
-      org.label-schema.url="https://github.com/Proxicon/powershell-vscode-server" \
-      org.label-schema.vcs-url="https://github.com/Proxicon/powershell-vscode-server" \
-      org.label-schema.name="Proxicon" \
-      org.label-schema.vendor="Proxicon" \
+      org.label-schema.url="https://github.com/sytone/powershell-vscode-server" \
+      org.label-schema.vcs-url="https://github.com/sytone/powershell-vscode-server" \
+      org.label-schema.name="sytone" \
+      org.label-schema.vendor="sytone" \
       org.label-schema.version=${PS_EXTENSION_VERSION} \
       org.label-schema.schema-version="1.0" \
       org.label-schema.vcs-ref=${VCS_REF} \
